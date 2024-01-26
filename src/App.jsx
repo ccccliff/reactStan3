@@ -11,7 +11,7 @@ function App() {
   ];
 
   const [filteredStudents, setFilteredStudents] = useState(initialStudents);
-
+//다날라감
   return (
     <div>
       <h1>학생 목록</h1>
