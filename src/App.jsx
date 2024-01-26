@@ -11,10 +11,11 @@ const [adults,setAdults] = useState([])
   // TODO: filter를 사용하여 18세 이상의 학생들만 선택하세요.
   const filteredStudents = students.filter(function(student){
     return student.age >= 18;
+    setAdults
   });
 
   const adultsBtn = function () {
-    
+    const newAdults = filteredStudents.map((students,index) => {})
   }
 
   return (
