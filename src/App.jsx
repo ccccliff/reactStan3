@@ -12,7 +12,10 @@ const [adults,setAdults] = useState([])
   const filteredStudents = students.filter((student)=>student.age >= 18);
 
   const adultsBtn = function () {
-    const newAdults = filteredStudents.map((students,index) => )
+    setAdults(filteredStudents);
+  }
+  const nameclick = function(students){
+    alert(`${students.name} ${students.age} ${students.grade}`)
   }
 
   return (
@@ -20,7 +23,7 @@ const [adults,setAdults] = useState([])
       <h1>학생 목록</h1>
       <ul>
         {/* TODO: map을 사용해서 filteredStudents를 여기에 렌더링하세요. */}
-        {filteredStudents.map((adults)=>{})}
+        {adults.map((students)=><li key={students} onClick={()=>nameclick(students)}>{students.name}</li>)}
         <button onClick={adultsBtn}>버튼</button>
         {/* TODO: 학생이름을 클릭하면 나이와 점수가 alert 돼야 해요.*/}
       </ul>
